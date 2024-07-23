@@ -21,7 +21,7 @@ jobs:
           password: ${{ secrets.GHCR_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -t ghcr.io/${{ github.repository }}/nextcloud:29.0.3-apache-custom .
+        run: docker build -t ghcr.io/NeptuneHub/nextcloud-custom:latest .
 
       - name: Push Docker image
-        run: docker push ghcr.io/${{ github.repository }}/nextcloud:29.0.3-apache-custom
+        run: docker push ghcr.io/NeptuneHub/nextcloud-custom:latest
