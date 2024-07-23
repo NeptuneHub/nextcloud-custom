@@ -1,4 +1,4 @@
-FROM nextcloud:latest-apache
+FROM nextcloud:29.0.4-apache
 
 # Update the package lists
 RUN apt-get update && \
@@ -8,4 +8,4 @@ RUN apt-get update && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # Reapply the Nextcloud configuration
-COPY --from=nextcloud:latest-apache /var/www/html /var/www/html
+COPY --from=nextcloud:29.0.4-apache /var/www/html /var/www/html
